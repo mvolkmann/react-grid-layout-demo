@@ -1,0 +1,36 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.body {
+  flex-grow: 1;
+  align-items: stretch;
+
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+header {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.nav {
+  align-self: stretch;
+  background-color: linen;
+  padding: 10px;
+}
+
+.react-grid-layout {
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.react-grid-item {
+  border: solid gray 1px;
+}
