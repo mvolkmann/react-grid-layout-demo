@@ -9,34 +9,32 @@ import './App.css';
 class App extends Component {
   render() {
     var layout = [
-      {i: 'a', x: 0, y: 0, w: 1, h: 2},
-      {i: 'b', x: 1, y: 0, w: 3, h: 2},
-      {i: 'c', x: 4, y: 0, w: 1, h: 2}
+      {i: 'a', x: 0, y: 0, w: 1, h: 1},
+      {i: 'b', x: 1, y: 0, w: 1, h: 1},
+      {i: 'c', x: 0, y: 1, w: 2, h: 2}
     ];
 
     return (
       <div className="App">
         <header>Header Content</header>
         <div className="body">
-          {/*TODO: As long as the nav is present, the mouse location is off when dragging an item! */}
           <div className="nav">Nav Content</div>
           <GridLayout
             autoSize={false}
-            cols={12}
-            items={3}
+            cols={12} /* default is 12 */
             layout={layout}
-            rowHeight={30}
+            rowHeight={50} /* default is 150 */
             width={1200}
           >
-            {/* Why aren't these resizable? */}
-            <div key="a" i="a" x="0" y="0" w="1" h="1">
-              a
+            <div key="a">
+              {/* Can't drag by images!  Need to disable those mouse events? */}
+              <img alt="Boston 2013" src="images/boston-2013.jpg" />
             </div>
-            <div key="b" i="b" x="1" y="0" w="1" h="1">
-              b
+            <div key="b">
+              <img alt="Oreos" src="images/oreos.jpg" />
             </div>
-            <div key="c" i="c" x="0" y="1" w="2" h="1">
-              c
+            <div key="c">
+              <img alt="MackinawIsland" src="images/MackinawIsland.jpg" />
             </div>
           </GridLayout>
         </div>

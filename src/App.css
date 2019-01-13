@@ -20,6 +20,11 @@ header {
   width: 100%;
 }
 
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 .nav {
   align-self: stretch;
   background-color: linen;
